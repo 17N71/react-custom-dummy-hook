@@ -1,6 +1,6 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 export function useDummyHook(){
-    const [array, setArray] = useState([1,2,3,4,5,6,7,8,9]);
+    const [array, setArray] = useState([]);
     function createArray(n=9){
         let customArray = []
         for (let i = 0; i < n; i++) {
@@ -10,6 +10,11 @@ export function useDummyHook(){
             setArray(customArray)
         }())
     }
+
+    useEffect(() => {
+        createArray()
+    },[]);
+
     function randomF(){
         if(!array){
             return
