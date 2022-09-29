@@ -39,7 +39,7 @@ export function useDummyHook(){
             return
         }
         if (array.length <2){
-            alert("array length less then 2")
+            alert("array length less then 2 page will be reloaded")
             location.reload()
         }
         setArray([...array.slice(0,-1)])
