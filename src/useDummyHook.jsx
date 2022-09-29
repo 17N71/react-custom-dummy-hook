@@ -38,8 +38,10 @@ export function useDummyHook(){
         if (!array){
             return
         }
-        alert("array length less then 2")
-        location.reload()
+        if (array.length <2){
+            alert("array length less then 2")
+            location.reload()
+        }
         setArray([...array.slice(0,-1)])
     }
     function keep5(){
